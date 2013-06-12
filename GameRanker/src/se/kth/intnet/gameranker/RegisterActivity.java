@@ -1,8 +1,11 @@
 package se.kth.intnet.gameranker;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 public class RegisterActivity extends Activity {
@@ -23,5 +26,22 @@ public class RegisterActivity extends Activity {
 				finish();
 			}
 		});
+		
+		// The login button
+				final Button button = (Button) findViewById(R.id.login_button);
+				button.setOnClickListener(new View.OnClickListener() {
+					public void onClick(View v) {
+						EditText userText = (EditText) findViewById(R.id.login_username);
+						EditText passText = (EditText) findViewById(R.id.login_password);
+						String user = userText.getText().toString();
+						String pass = passText.getText().toString();
+						register(user, pass);
+						finish();
+					}
+				});
+	}
+	
+	private void register(String user, String pass){
+		
 	}
 }
