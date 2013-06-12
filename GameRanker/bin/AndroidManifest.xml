@@ -14,14 +14,17 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="se.kth.intnet.gameranker.MainActivity"
-            android:label="@string/app_name" >
+            android:name=".LoginActivity"
+            android:label="Login to your Account" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        
+         <!--  Entry for RegisterActivity.class -->
+        <activity android:name=".RegisterActivity"
+                  android:label="Register New Account"></activity>
     </application>
 
 </manifest>
